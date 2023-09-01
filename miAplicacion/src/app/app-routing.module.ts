@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'menu',
     pathMatch: 'full'
   },
   {
@@ -22,6 +22,14 @@ const routes: Routes = [
   {
     path: 'tres',
     loadChildren: () => import('./tres/tres.module').then( m => m.TresPageModule)
+  },
+  {
+    path: 'cuatro',
+    loadChildren: () => import('./cuatro/cuatro.module').then( m => m.CuatroPageModule)
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
 ];
 
