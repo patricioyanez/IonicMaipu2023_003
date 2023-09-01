@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cinco</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-button id="mostrarAlerta">
+    <ion-icon slot="icon-only" name="alert"></ion-icon>
+    Alerta
+  </ion-button>
+  <ion-alert trigger="mostrarAlerta"
+              header="Titulo de la alerta"
+              subHeader="Sub titulo de la alerta"
+              message = "Este es un alerta"
+              [buttons]="['Aceptar']"
+  ></ion-alert>
+
+  <ion-button (click)="alerta()" expand="block" fill="clear" shape="round">
+    alerta angular
+  </ion-button>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="menu"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+

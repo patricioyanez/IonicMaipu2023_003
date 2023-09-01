@@ -11,24 +11,33 @@
     </ion-list-header>
 
     <ion-item>
-      <ion-button expand="block" shape="round" [routerLink]="['/uno']">
+      <ion-button shape="round" [routerLink]="['/uno']">
         Ver botones
       </ion-button>
     </ion-item>
     <ion-item>
-      <ion-button expand="block" shape="round" [routerLink]="['/dos']">
+      <ion-button shape="round" [routerLink]="['/dos']">
         Formulario en blanco
       </ion-button>
     </ion-item>
     <ion-item>
-      <ion-button expand="block" shape="round" [routerLink]="['/tres']">
+      <ion-button shape="round" [routerLink]="['/tres']">
         inputs disponibles
       </ion-button>
     </ion-item>
     <ion-item>
       <p><a href="/cuatro">Ir a pagina de tarjetas (card)</a></p>
     </ion-item>
-
+    <ion-item button [routerLink]="['/cinco']">
+      <ion-label>Alertas</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-button shape="round" size="large" routerLink="['/cinco']">
+        <ion-icon slot="icon-only" name="people-outline"></ion-icon>
+        <!-- https://ionic.io/ionicons -->
+        Alertar
+      </ion-button>
+    </ion-item>
 
   </ion-list>
 
