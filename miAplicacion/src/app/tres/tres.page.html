@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>tres</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1>Información</h1>
+  <label>Nombre</label>
+  <ion-input type="text" placeholder="Ingrese nombre"></ion-input>
+  <ion-input type="text" label="Apellido" placeholder="Ingrese su apellido"></ion-input>
+  <ion-input type="number" label="Edad" max="5" placeholder="Ingrese su Edad"></ion-input>
+  <ion-input type="email" label="Email" placeholder="Ingrese primer correo"></ion-input>
+  <!-- comentario -->
+  <ion-input type="email" 
+              label="Email"
+              labelPlacement="floating" 
+              helperText="Debe ingrese un correo válido"
+              errorText ="El correo no es válido"
+              ngModel
+              email              
+              placeholder="Ingrese primer correo"></ion-input>
+  
+  <ion-input type="password" label="Clave" placeholder="******"></ion-input>
+
+  <ion-input label="Dirección" labelPlacement="stacked" placeholder="Esquina blanca 501"></ion-input>
+  <ion-input label="Carrera" labelPlacement="floating" placeholder="Su Carrera"></ion-input>
+  <ion-input label="Jornada" labelPlacement="floating" [clearInput]="true"></ion-input>
+  <ion-input label="Sede" labelPlacement="floating" [counter]="true" maxlength="30" [clearInput]="true"></ion-input>
+
+  <ion-input label="Valor de la carrera" placeholder="Ingrese monto anual" fill="solid"></ion-input>
+  <ion-input label="Valor mensual" placeholder="Ingrese monto mensual" fill="outline" color="success"></ion-input>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
