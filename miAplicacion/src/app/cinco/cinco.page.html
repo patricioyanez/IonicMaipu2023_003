@@ -23,7 +23,14 @@
   <ion-button (click)="alerta()" expand="block" fill="clear" shape="round">
     alerta angular
   </ion-button>
+  <ion-label>El valor del numero es: {{numero2}}</ion-label>
 
+  <br>
+  <ion-button (click)="incrementar()" expand="block">
+    <ion-icon slot="icon-only" name="add-outline"></ion-icon>Incrementar
+  </ion-button>
+  <br>
+  <ion-label>Valor actual: {{numero}} </ion-label>
 </ion-content>
 
 <ion-footer>

@@ -7,8 +7,11 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./cinco.page.scss'],
 })
 export class CincoPage implements OnInit {
-
-  constructor(private alertController: AlertController) { }
+  numero : number; // sin inicializar
+  numero2: number = 100;
+  constructor(private alertController: AlertController) {
+    this.numero = 0; // atributo inicializado
+   }
 
   ngOnInit() {
   }
@@ -22,5 +25,11 @@ export class CincoPage implements OnInit {
         buttons:['Ok'],
     });
     await alert.present();
+  }
+
+  incrementar()
+  {
+    this.numero++;
+    // this.numero += 1;
   }
 }
