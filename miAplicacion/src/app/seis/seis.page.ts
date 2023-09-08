@@ -25,5 +25,8 @@ export class SeisPage implements OnInit {
 
   ngOnInit() {
   }
-
+  mostrarAsignaturas()
+  {
+    this.permitir = !this.permitir;
+  }
 }

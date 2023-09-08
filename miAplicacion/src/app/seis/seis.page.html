@@ -21,14 +21,29 @@
       <ion-col size="4">Mensaje:</ion-col>
       <ion-col size="8">{{mensaje}}</ion-col>
     </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="mostrarAsignaturas()">
+          <ion-icon slot="icon-only" name="eye-outline" *ngIf="!permitir"></ion-icon>
+          <ion-icon slot="icon-only" name="eye-off-outline" *ngIf="permitir"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 
-  <ion-text color="primary" *ngIf="permitir && true ">
+  <ion-text color="primary" *ngIf="permitir && true; else noPermitido ">
     <h1 class="ion-text-center">Listado de asignaturas</h1>
+    <ion-item *ngFor="let asignatura of asignaturas">
+      <ion-label>{{asignatura.nombre | titlecase }}</ion-label>
+      <ion-label>{{asignatura.nombre | slice:0:6 }}</ion-label>
+      <ion-label>{{asignatura.nota | number : '1.0-0' }}</ion-label>
+    </ion-item>
+    <!-- angular pipes https://angular.io/guide/pipes -->
   </ion-text>
-
-  <ion-item *ngFor="let asignatura of asignaturas">
-    <ion-label>{{asignatura.nombre}}</ion-label>
-  </ion-item>
-
+  <ng-template #noPermitido> <!-- se ejecuta cuando *ngIf es falso -->
+    <ion-text color="danger" class="ion-text-center">
+      <h1>No está permitido ver los datos</h1>
+    </ion-text>
+  </ng-template>
 </ion-content>
