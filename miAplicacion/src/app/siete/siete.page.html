@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>siete</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<ion-text color="primary">
+  <h1>Directiva Unidireccional</h1>
+  <input type="text" [ngModel]="nombre">
+</ion-text>
+<br>
+<ion-label>El nombre es: {{nombre}}</ion-label>
+
+<ion-text color="primary">
+  <h1>Directiva Bidireccional</h1>
+  <input type="text" [(ngModel)]="nombre2">
+</ion-text>
+<br>
+<ion-label>El nombre es: {{nombre2}}</ion-label>
+
+<h1>Ejercicios: Sumar 2 números y mostrar el resultado. Usar botón</h1>
+
+<ion-item>
+  <ion-label>Número 1</ion-label>
+  <input type="number" [(ngModel)]="n1">
+</ion-item>
+<ion-item>
+  <ion-label>Número 2</ion-label>
+  <input type="number" [(ngModel)]="n2">
+</ion-item>
+<ion-button (click)="sumar()">
+  <ion-icon slot="icon-only" name="add"></ion-icon>
+</ion-button>
+<ion-item *ngIf="resultado">
+  <ion-label>El resultado es: {{resultado}}</ion-label>
+</ion-item>
+</ion-content>
