@@ -23,6 +23,6 @@ export class HomePage {
   abrirSegundaPagina3()
   {
     if(this.numero1 > 0)
-      this.router.navigate(['/segunda']);
+      this.router.navigate(['/segunda', {valor:'Juan'}]);
   }
 }
