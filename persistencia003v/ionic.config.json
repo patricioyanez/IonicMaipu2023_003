@@ -1,0 +1,7 @@
+{
+  "name": "persistencia003v",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
