@@ -34,7 +34,7 @@ export class TerceraDetallePage implements OnInit {
   ngOnInit() {
     this.activated.paramMap.subscribe(paramMap =>{
       let id = Number(paramMap.get('id'));
-      this.persona = this.personas.filter(x => {return x.id == id;})
+      this.persona = this.personas.find(x => {return x.id == id;})
     });
   }
 

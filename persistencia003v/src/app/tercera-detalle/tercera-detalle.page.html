@@ -10,5 +10,16 @@
 <ion-content [fullscreen]="true">
   <!-- Ejercicio: crear la pagina de 
     detalle mostrando toda la info de la persona -->
+    <ion-card>
+      <img src="{{persona.foto}}" alt="No disponible">
+      <ion-card-header>
+        <ion-card-subtitle>Nombre</ion-card-subtitle>
+        <ion-card-title>{{persona.nombre}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Usuario con id: {{persona.id}}<br>
+        Edad: {{persona.edad}}
+      </ion-card-content>
+    </ion-card>
 
 </ion-content>
