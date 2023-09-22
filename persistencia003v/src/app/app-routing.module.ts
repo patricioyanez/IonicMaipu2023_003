@@ -12,8 +12,16 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'segunda/:valorURL',
+    loadChildren: () => import('./segunda/segunda.module').then( m => m.SegundaPageModule)
+  },
+  {
     path: 'segunda',
     loadChildren: () => import('./segunda/segunda.module').then( m => m.SegundaPageModule)
+  },
+  {
+    path: 'tercera',
+    loadChildren: () => import('./tercera/tercera.module').then( m => m.TerceraPageModule)
   },
 ];
 
