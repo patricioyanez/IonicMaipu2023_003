@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-tercera',
-  templateUrl: './tercera.page.html',
-  styleUrls: ['./tercera.page.scss'],
+  selector: 'app-tercera-detalle',
+  templateUrl: './tercera-detalle.page.html',
+  styleUrls: ['./tercera-detalle.page.scss'],
 })
-export class TerceraPage implements OnInit {
+export class TerceraDetallePage implements OnInit {
   personas = [
     {
       id    : 1,
@@ -27,9 +28,14 @@ export class TerceraPage implements OnInit {
       foto  : 'https://img.freepik.com/foto-gratis/apuesto-hombre-empresario-sonriendo-alegre_176420-17877.jpg?w=2000'
     }
   ]
-  constructor() { }
+  persona :any;
+  constructor(private activated:ActivatedRoute) { }
 
   ngOnInit() {
+    this.activated.paramMap.subscribe(paramMap =>{
+      let id = Number(paramMap.get('id'));
+      this.persona = this.personas.filter(x => {return x.id == id;})
+    });
   }
 
 }
