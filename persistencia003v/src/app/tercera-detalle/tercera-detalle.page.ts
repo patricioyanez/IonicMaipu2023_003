@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tercera-detalle',
@@ -29,7 +30,9 @@ export class TerceraDetallePage implements OnInit {
     }
   ]
   persona :any;
-  constructor(private activated:ActivatedRoute) { }
+  constructor(private activated:ActivatedRoute,
+    private alertController : AlertController,
+    private toastController : ToastController) { }
 
   ngOnInit() {
     this.activated.paramMap.subscribe(paramMap =>{
@@ -37,5 +40,12 @@ export class TerceraDetallePage implements OnInit {
       this.persona = this.personas.find(x => {return x.id == id;})
     });
   }
-
+  async si()
+  {
+    // toast
+  }
+  async no()
+  {
+    // alert
+  }
 }
