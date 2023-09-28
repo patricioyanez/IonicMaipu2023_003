@@ -8,6 +8,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  Ejercicio 1:
+  Agregar input para el id y valor. Almacenar en el Storage
+  <br>
+  id:
+  <ion-input type="number" [(ngModel)]="id"></ion-input><br>
+  Valor
+  <ion-input type="text" placeholder="Ingrese valor" [(ngModel)]="valor"></ion-input>
+
+
+
 <ion-button (click)="agregar()">
   <ion-icon slot="icon-only" name="add"></ion-icon>
 </ion-button>
