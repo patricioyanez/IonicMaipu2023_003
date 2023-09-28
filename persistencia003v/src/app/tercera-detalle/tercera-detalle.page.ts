@@ -43,9 +43,23 @@ export class TerceraDetallePage implements OnInit {
   async si()
   {
     // toast
+    const t = await this.toastController.create({
+      message : 'Le agradó la persona',
+      icon    : 'checkmark-circle-outline',
+      color   : 'success',
+      duration: 3000
+    });
+    t.present();
   }
   async no()
   {
     // alert
+    const a = await this.alertController.create({
+      subHeader : 'Alerta',
+      header    : 'Mensaje',
+      message   : 'No le agradó la persona',
+      buttons   : ['Aceptar']
+    });
+    a.present();
   }
 }
