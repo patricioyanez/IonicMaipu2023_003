@@ -14,6 +14,10 @@ export class QuintaPage implements OnInit {
   }
   async agregar()
   {
+// Ejercicio 1: Validar todos los datos  antes de guardar
+// usar TOAST rojo error y verde guardado.
     this.crud.guardar(this.persona.rut, this.persona);
   }
+// Ejercicio 2: Terminar el crud para los datos de persona
+
 }
