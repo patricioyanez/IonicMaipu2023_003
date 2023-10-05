@@ -6,9 +6,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+// 1-. npm install @ionic/storage-angular
+// 2.- agregar import
 import { IonicStorageModule } from '@ionic/storage-angular';
-
+// 3.- agregar en @ngModule. imports: , IonicStorageModule.forRoot()
 
 @NgModule({
   declarations: [AppComponent],
