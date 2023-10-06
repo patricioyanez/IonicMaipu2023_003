@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Listado de Usuarios</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="quinta"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list>
+    <ion-item *ngFor="let persona of personas">
+      <ion-label>{{persona.rut}}</ion-label>
+      <ion-label>{{persona.nombre}}</ion-label>
+      <ion-label>{{persona.correo}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

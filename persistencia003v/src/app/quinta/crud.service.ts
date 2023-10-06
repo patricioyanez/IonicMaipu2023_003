@@ -15,7 +15,7 @@ export class CrudService {
 
   async leer(id: string)
   {
-    await this.storage.get(id);
+    return await this.storage.get(id);
   }
 
   async eliminar(id: string)
