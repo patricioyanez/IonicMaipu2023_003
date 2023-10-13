@@ -17,7 +17,7 @@ export class QuintaPage implements OnInit {
 
   ngOnInit() {
     this.activated.paramMap.subscribe(paramMap =>{
-      let rut = paramMap.get('rut')??'';
+      let rut = paramMap.get('id')??'';
       this.crud.leer(rut).then(x => {this.persona = x})
     });
   }

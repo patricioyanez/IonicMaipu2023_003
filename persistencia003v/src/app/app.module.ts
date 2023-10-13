@@ -11,10 +11,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage-angular';
 // 3.- agregar en @ngModule. imports: , IonicStorageModule.forRoot()
 
+// 1.- permite realizar solicitudes a un servidor
+import { HttpClientModule, HttpClient} from '@angular/common/http';
+// 2.- agregar al import y proveedor
+
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot()],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [HttpClientModule, BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot()],
+  providers: [HttpClient, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

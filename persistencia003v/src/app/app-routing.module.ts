@@ -36,12 +36,16 @@ const routes: Routes = [
     loadChildren: () => import('./quinta/quinta.module').then( m => m.QuintaPageModule)
   },
   {
-    path: 'quinta/:rut',
+    path: 'quinta/:id',
     loadChildren: () => import('./quinta/quinta.module').then( m => m.QuintaPageModule)
   },
   {
     path: 'quintalistado',
     loadChildren: () => import('./quintalistado/quintalistado.module').then( m => m.QuintalistadoPageModule)
+  },
+  {
+    path: 'sexta',
+    loadChildren: () => import('./sexta/sexta.module').then( m => m.SextaPageModule)
   },
 ];
 
