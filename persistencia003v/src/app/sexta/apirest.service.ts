@@ -17,4 +17,13 @@ export class ApirestService {
       this.listado = data;
     });
   }
+  getUsersPost(id:string)
+  {
+    const url = this.urlAPI + 'users/' + id + '/posts';
+    return this.http.get(url).subscribe((data=[]) => {
+      this.listado = data;
+    });
+  }
+
+// mostrar todos los comentarios del post seleccionado
 }

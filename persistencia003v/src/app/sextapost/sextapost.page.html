@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Post del usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="sexta"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let x of posts">
+    <ion-card-header>
+      <ion-card-subtitle>{{x.id}}</ion-card-subtitle>
+      <ion-card-title>{{x.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{x.body}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
