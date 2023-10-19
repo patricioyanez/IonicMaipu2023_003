@@ -7,22 +7,21 @@ import { Injectable } from '@angular/core';
 export class ApirestService {
   private urlAPI = 'https://jsonplaceholder.typicode.com/';
   listado : any = [];
+  posts : any = [];
 
   constructor(private http: HttpClient) { }
 
   getUsers()
   {
     const url = this.urlAPI + 'users';
-    this.http.get(url).subscribe((data=[]) => {
-      this.listado = data;
-    });
+    this.http.get(url).subscribe((data=[]) => {this.listado = data; });
+    return this.listado;
   }
   getUsersPost(id:string)
   {
+    this.posts = [];
     const url = this.urlAPI + 'users/' + id + '/posts';
-    return this.http.get(url).subscribe((data=[]) => {
-      this.listado = data;
-    });
+    this.http.get(url).subscribe((data=[]) => { this.posts = data; });
   }
 
 // mostrar todos los comentarios del post seleccionado
