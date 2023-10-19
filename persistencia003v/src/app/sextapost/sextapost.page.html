@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card *ngFor="let x of posts">
+  <ion-card *ngFor="let x of posts" [routerLink]="['/sextacomentarios/' + x.id]">
     <ion-card-header>
       <ion-card-subtitle>{{x.id}}</ion-card-subtitle>
       <ion-card-title>{{x.title}}</ion-card-title>

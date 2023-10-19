@@ -8,6 +8,7 @@ export class ApirestService {
   private urlAPI = 'https://jsonplaceholder.typicode.com/';
   listado : any = [];
   posts : any = [];
+  comentarios : any = [];
 
   constructor(private http: HttpClient) { }
 
@@ -24,5 +25,11 @@ export class ApirestService {
     this.http.get(url).subscribe((data=[]) => { this.posts = data; });
   }
 
-// mostrar todos los comentarios del post seleccionado
+// Ejercicio 15: mostrar todos los comentarios del post seleccionado
+  getPostComments(id:string)
+  {
+    this.posts = [];
+    const url = this.urlAPI + 'posts/' + id + '/comments';
+    this.http.get(url).subscribe((data=[]) => { this.comentarios = data; });
+  }
 }
