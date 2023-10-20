@@ -1,0 +1,54 @@
+{
+  "usuario": [
+    {
+      "id": 2,
+      "nombre": "Ana",
+      "apellido": "Arce",
+      "habilitado": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Diego",
+      "apellido": "Boggle",
+      "habilitado": 1
+    },
+    {
+      "nombre": "ben",
+      "apellido": "brereton",
+      "habilitado": "1",
+      "id": 4
+    }
+  ],
+  "mensajes": [
+    {
+      "id": 1,
+      "usuarioId": 1,
+      "asunto": "ejemplo 1",
+      "cuerpo": "afsdfasdafs"
+    },
+    {
+      "id": 2,
+      "usuarioId": 1,
+      "asunto": "ejemplo 1",
+      "cuerpo": "afsdf 45636 asdafs"
+    },
+    {
+      "id": 3,
+      "usuarioId": 2,
+      "asunto": "ejemplo 2",
+      "cuerpo": "fghdfghdfgh"
+    },
+    {
+      "id": 4,
+      "usuarioId": 2,
+      "asunto": "ejemplo 2",
+      "cuerpo": "6345fghdfghdf"
+    },
+    {
+      "id": 5,
+      "usuarioId": 3,
+      "asunto": "ejemplo 3",
+      "cuerpo": "xxx gsdfghjr76"
+    }
+  ]
+}
