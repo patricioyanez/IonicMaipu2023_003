@@ -11,5 +11,14 @@ export class SeptimaPage implements OnInit {
 
   ngOnInit() {
   }
-
+  sumar(n1:number, n2:number)
+  {
+    return n1+n2;
+  }
+  dividir(n1:number, n2:number)
+  {
+    if(n2== 0)
+      return undefined;
+    return n1/n2;
+  }
 }
