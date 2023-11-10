@@ -39,4 +39,14 @@ describe('=========== pruebas sobre pagina septima', ()=>{
     expect(component.dividir(6,0)).toBeUndefined();
   })
 
+  it('multiplicar: 2 nros + y cero', ()=>{
+    expect(component.multiplicar(6,1)).toBeGreaterThanOrEqual(0);
+  })
+  it('multiplicar: 1 nro - ', ()=>{
+    expect(component.multiplicar(6,-1)).toBeLessThanOrEqual(0);
+  })
+
+  it('multiplicar: 2 nros -', ()=>{
+    expect(component.multiplicar(-6,-1)).toBeGreaterThan(0);
+  })
 })
